@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fake News Detection</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .main {
+        background-color: #be5a3822;
+        font-family: "Outfit";
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+      }
+      h2 {
+        font-size: 60px;
+        text-decoration: underline;
+      }
+      .description {
+        text-align: center;
+        font-size: 22px;
+        width: 70%;
+      }
+      .news1 {
+        font-size: 35px;
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .news-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        font-weight: 600;
+      }
+      .news1 button {
+        font-family: "Outfit";
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: transparent;
+        background-color: #be5a38;
+        cursor: pointer;
+        color: white;
+      }
+      .news1 button:hover {
+        color: #3f3334;
+      }
+      .form-control{
+        width: 250%;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 12px;
+        font-weight: 450;
+        font-family: "Outfit";
+        border-color: black;
+        overflow: hidden;
+      }
+      .result {
+        font-size: 40px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="main">
+      <h2>FAKE NEWS DETECTION</h2>
+        <p class="description">
+          "Fake news detection using machine learning" is a project that
+          involves training a machine learning model to distinguish between real
+          and fake news articles. The model is trained on a dataset of news
+          articles using supervised learning algorithms and NLP techniques. The
+          goal of the project is to help identify and flag fake news articles to
+          prevent their spread and reduce the impact of misinformation in
+          society.
+        </p>
+      <div>
+        <form action="/predict" method="POST" class="news1">
+          <div class="news-input">
+            <label for="exampleInputEmail1" class="form-label">Enter news headlines:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="news"
+              name="news"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <button type="submit">Predict</button>
+        </form>
+      </div>
+      <p class="result"><b>{{prediction_text}}</b></p>
+    </div>
+  </body>
+</html>

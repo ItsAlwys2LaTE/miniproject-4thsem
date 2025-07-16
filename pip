@@ -1,0 +1,8 @@
+Collecting Flask==2.2.3 (from -r requirements.txt (line 1))
+  Downloading Flask-2.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting pandas==2.0.0 (from -r requirements.txt (line 2))
+  Downloading pandas-2.0.0.tar.gz (5.3 MB)
+     ---------------------------------------- 5.3/5.3 MB 11.0 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
